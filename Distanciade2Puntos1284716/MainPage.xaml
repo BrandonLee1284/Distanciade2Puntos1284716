@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:Distanciade2Puntos1284716"
+             x:Class="Distanciade2Puntos1284716.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewModel:Puntos />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="20">
+        
+        <Label Text="Punto 1 - Coordenadas" FontSize="18"/>
+        <Entry Text="{Binding Punto1X, Mode=TwoWay}" Placeholder="Ingrese X del Punto 1"/>
+        <Entry Text="{Binding Punto1Y, Mode=TwoWay}" Placeholder="Ingrese Y del Punto 1"/>
+
+
+        <Label Text="Punto 2 - Coordenadas" FontSize="18" Margin="0,20,0,0"/>
+        <Entry Text="{Binding Punto2X, Mode=TwoWay}" Placeholder="Ingrese X del Punto 2"/>
+        <Entry Text="{Binding Punto2Y, Mode=TwoWay}" Placeholder="Ingrese Y del Punto 2"/>
+
+        <Button Text="Calcular La Distancia" Command="{Binding CalcularDistanciaCommand}" Margin="0,20,0,0"/>
+
+        <Label Text="{Binding Resultado}" FontSize="18"/>
+    </StackLayout>
+
+</ContentPage>
